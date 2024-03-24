@@ -69,7 +69,7 @@ const StoreSwitcher = ({ className, items = [] }: StoreSwitcherProps) => {
 					className={cn('w-[200px] justify-between', className)}
 				>
 					<StoreIcon className='mr-2 h-4 w-4' />
-					{currentStore?.label}
+					<p className='truncate'>{currentStore?.label}</p>
 					<ChevronsUpDown className='ml-auto h-4 w-4 shrink-0 opacity-50' />
 				</Button>
 			</PopoverTrigger>
@@ -77,7 +77,7 @@ const StoreSwitcher = ({ className, items = [] }: StoreSwitcherProps) => {
 				<Command>
 					<CommandList>
 						<CommandInput placeholder='Search store...' />
-						{/* <CommandEmpty>No store found.</CommandEmpty> */}
+						<CommandEmpty>No store found.</CommandEmpty>
 						<CommandGroup heading='Stores'>
 							{formattedItems.map((store) => (
 								<CommandItem
