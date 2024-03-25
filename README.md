@@ -11,6 +11,7 @@ It's my second project after a long break from coding, so it's perfect for revis
 ## Todo List
 
 - [ ] Fix welcoming "Create store" modal, if you try to spam closing it, it will react weirdly.
+- [ ] Add regex hex checking in `/api/colors` routes
 
 ## Features
 
