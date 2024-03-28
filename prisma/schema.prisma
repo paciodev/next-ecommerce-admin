@@ -19,6 +19,7 @@ model Store {
   sizes      Size[]
   colors     Color[]
   products   Product[]
+  orders     Order[]
 }
 
 model Billboard {
@@ -31,7 +32,7 @@ model Billboard {
   categories Category[]
 
   storeId String
-  store   Store  @relation(fields: [storeId], references: [id], onDelete: Cascade)
+  store   Store  @relation(fields: [storeId], references: [id])
 }
 
 model Category {
@@ -42,7 +43,7 @@ model Category {
   products  Product[]
 
   storeId String
-  store   Store  @relation(fields: [storeId], references: [id], onDelete: Cascade)
+  store   Store  @relation(fields: [storeId], references: [id])
 
   billboardId String
   billboard   Billboard @relation(fields: [billboardId], references: [id])
@@ -57,7 +58,7 @@ model Size {
   products  Product[]
 
   storeId String
-  store   Store  @relation(fields: [storeId], references: [id], onDelete: Cascade)
+  store   Store  @relation(fields: [storeId], references: [id])
 }
 
 model Color {
@@ -69,18 +70,19 @@ model Color {
   products  Product[]
 
   storeId String
-  store   Store  @relation(fields: [storeId], references: [id], onDelete: Cascade)
+  store   Store  @relation(fields: [storeId], references: [id])
 }
 
 model Product {
-  id         String   @id @default(uuid())
+  id         String      @id @default(uuid())
   name       String
   price      Decimal
-  isFeatured Boolean  @default(false)
-  isArchived Boolean  @default(false)
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
+  isFeatured Boolean     @default(false)
+  isArchived Boolean     @default(false)
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
   images     Image[]
+  orderItems OrderItem[]
 
   storeId String
   store   Store  @relation(fields: [storeId], references: [id])
@@ -102,5 +104,28 @@ model Image {
   updatedAt DateTime @updatedAt
 
   productId String
-  product   Product @relation(fields: [productId], references: [id], onDelete: Cascade)
+  product   Product @relation(fields: [productId], references: [id])
+}
+
+model Order {
+  id         String      @id @default(uuid())
+  isPaid     Boolean     @default(false)
+  phone      String      @default("")
+  address    String      @default("")
+  createdAt  DateTime    @default(now())
+  updatedAt  DateTime    @updatedAt
+  orderItems OrderItem[]
+
+  storeId String
+  store   Store  @relation(fields: [storeId], references: [id])
+}
+
+model OrderItem {
+  id String @id @default(uuid())
+
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+
+  orderId String?
+  order   Order?  @relation(fields: [orderId], references: [id])
 }
