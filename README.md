@@ -12,6 +12,9 @@ It's my second project after a long break from coding, so it's perfect for revis
 
 - [ ] Fix welcoming "Create store" modal, if you try to spam closing it, it will react weirdly.
 - [ ] Add regex hex checking in `/api/colors` routes
+- [ ] Add new icon and metadata.
+- [ ] Add 404 pages.
+- [ ] Add .env.example
 
 ## Features
 
