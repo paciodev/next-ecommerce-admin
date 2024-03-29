@@ -15,6 +15,7 @@ It's my second project after a long break from coding, so it's perfect for revis
 - [ ] Add new icon and metadata.
 - [ ] Add 404 pages.
 - [ ] Add .env.example
+- [ ] Change way of sending `FRONTEND_STORE_URL` to support multiple stores by stripe
 
 ## Features
 
