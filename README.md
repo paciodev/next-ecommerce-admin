@@ -10,11 +10,10 @@ It's my second project after a long break from coding, so it's perfect for revis
 
 ## Todo List
 
-- [ ] Fix welcoming "Create store" modal, if you try to spam closing it, it will react weirdly.
-- [ ] Add regex hex checking in `/api/colors` routes
-- [ ] Add new icon and metadata.
-- [ ] Add 404 pages.
-- [ ] Add .env.example
+- [x] Add regex hex checking in `/api/colors` routes
+- [x] Add new icon.
+- [x] Basic 404 page.
+- [x] Add .env.example
 - [ ] Change way of sending `FRONTEND_STORE_URL` to support multiple stores by stripe
 
 ## Features

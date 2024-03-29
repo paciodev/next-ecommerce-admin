@@ -24,6 +24,12 @@ export async function POST(req: Request, { params }: { params: { storeId: string
 			return new NextResponse('Store id is required', { status: 400 })
 		}
 
+		const hexColorRegex = /^#?([0-9A-F]{3}){1,2}$/i;
+
+		if (!hexColorRegex.test(value)) {
+			return new NextResponse('Invalid color value. Please provide a valid hexadecimal color code.', { status: 400 });
+		}
+
 		const storeByUserId = await prismadb.store.findFirst({
 			where: {
 				id: params.storeId,
