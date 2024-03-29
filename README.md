@@ -14,11 +14,32 @@ It's my second project after a long break from coding, so it's perfect for revis
 - [x] Add new icon.
 - [x] Basic 404 page.
 - [x] Add .env.example
-- [ ] Change way of sending `FRONTEND_STORE_URL` to support multiple stores by stripe
+- [x] Change way of sending `FRONTEND_STORE_URL` to support multiple stores by stripe
 
 ## Features
 
-_i'll list them soon_
+- Creating your own stores.
+- Adding billboards, categories, sizes, colors and individual products.
+- Displaying ready API endpoints for frontend connection.
+- Editing existing data.
+- Management of your store.
+- Image uploading and hosting.
+- Filters accessibility.
+- Dark and light mode.
+- Switching stores.
+- Beautiful dashboard overview graph.
+
+**AND MORE!**
+
+# [Live example of store made with this dashboard](https://pacio-ecommerce-store.vercel.app)
+
+## Screenshots
+
+![Dashboard overview](/screenshots/1.png)
+![Billboards](/screenshots/2.png)
+![Editing a product](/screenshots/3.png)
+![Managing your account with Clerk](/screenshots/4.png)
+![Creating new store](/screenshots/5.png)
 
 ## Getting Started
 
