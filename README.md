@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 This was made with [youtube tutorial](https://www.youtube.com/watch?v=5miHyP6lExg) from Antonio <3
 
-It's my second project after a long break from coding, so it's perfect for revision before developing serious projects.
+It's my first project after a long break from coding, so it's perfect for revision before developing serious projects.
 
 ## Todo List
 
